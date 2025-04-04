@@ -1,13 +1,8 @@
 # 🌿 PlantPal - Capstone Project
 
 
-
-
 ## 📋 Project Idea
 **PlantPal** is a plant care and management app designed to help users track their plants' health, get personalized care tips, and trade or purchase plants via a community marketplace. The app features user authentication, CRUD operations for plant management, and an intuitive interface for beginners.
-
-
-
 
 # 🌟 Key Features
 # 1. User Profiles & Personalization
@@ -87,11 +82,6 @@ Docker: For containerized deployments.
 
 
 
-
-
-
-
-
 # 🗓️ Development Timeline (4 Weeks)
 Week 1: Core Setup & Authentication
 Day 1-2: Project setup:
@@ -125,5 +115,3 @@ Day 24-26: User Testing & UI Polish:
 Beta testing and gather feedback.
 Day 27-28: Deployment:
 Deploy frontend on Vercel and backend on Render.
-Final GitHub push with README updates.
-
