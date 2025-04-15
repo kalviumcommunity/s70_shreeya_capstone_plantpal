@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "PlantPal testing",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
