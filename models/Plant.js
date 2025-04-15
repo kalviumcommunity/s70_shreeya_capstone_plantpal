@@ -1,6 +1,6 @@
+//plant schema
+
 const mongoose = require('mongoose')
-
-
 
 const plantSchema = new mongoose.Schema({
     plantName : String,
@@ -8,8 +8,6 @@ const plantSchema = new mongoose.Schema({
     description : String,
     addedOn : {type : Date, default : Date.now()}
 });
-
-
 
 
 const Plant = mongoose.model("Plant", plantSchema)
