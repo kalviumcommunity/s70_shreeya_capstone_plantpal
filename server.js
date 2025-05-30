@@ -6,10 +6,10 @@ const plantRoutes = require('./routes/plantRoutes')
 
 dotenv.config()
 
-const app = express()
-const PORT = 8000
-app.use(express.json())
-app.use(cors())
+const app = express();
+const PORT = 8000;
+app.use(express.json());
+app.use(cors());
 app.use('/user', plantRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI)
     })
 })
 .catch((err)=>{
-    console.log({'message': err,message})
+    console.log({'message': err.message})
 })
 
 

@@ -1,12 +1,14 @@
-//plant schema
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const plantSchema = new mongoose.Schema({
-    plantName : String,
+    plantName : {type : String, require : true},
     plantSpecies : String,
     description : String,
-    addedOn : {type : Date, default : Date.now()}
+    addedOn : {type : Date, default : Date.now()},
+    imageUrl : {type : String, require : true},
+    wateringFrequency : {type : String, enum : ['Daily', 'Every few days', 'Weekly', 'Biweekly'], default : 'Weekly'},
+    lastWatered : {type : Date, default : Date.now()},
 });
 
 

@@ -15,8 +15,8 @@ router.get('/get',async(req,res)=>{
 
 router.post('/createplant',async(req,res)=>{
     try{
-        const {name,species,description} = (req.body)
-        const newPlant = new Plant({name,species,description})
+        const {name,species,description,imageUrl,wateringFrequency,lastWatered} = (req.body)
+        const newPlant = new Plant({name,species,description,imageUrl,wateringFrequency,lastWatered})
         const savedPlant = await newPlant.save()
         res.status(201).json(savedPlant)
     }
@@ -25,5 +25,17 @@ router.post('/createplant',async(req,res)=>{
     }
 });
 
+router.put('/updateplant/:id', async(req,res)=>{
+    try{
+        const updatedPlant = await Plant.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        if(!updatedPlant){
+            res.status(404).json({message : 'Plant not found'})
+        }
+        res.status(200).json(updatedPlant);
+    }
+    catch(err){
+        res.status(500).json({message : err.message});
+    }
+});
 
 module.exports = router;
