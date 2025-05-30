@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostCard = ({ username, title, content, datePosted }) => {
+const Post = ({ username, title, content, datePosted }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md mb-4">
       <div className="flex justify-between items-center mb-2">
@@ -13,4 +13,4 @@ const PostCard = ({ username, title, content, datePosted }) => {
   );
 };
 
-export default PostCard;
+export default Post;

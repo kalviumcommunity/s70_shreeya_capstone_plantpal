@@ -5,7 +5,17 @@ meta {
 }
 
 post {
-  url: http:/localhost:8000/user/createplant
-  body: none
+  url: http://localhost:8000/user/createplant
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name" : "Snake Plant",
+    "species" : "Sansevaria",
+    "description" : "house plant, low maintainance",
+    "watering frequency" : "once a week",
+    "image" : "https://images.unsplash.com/photo-1616628182504-6e3e1d0f71b0?auto=format&fit=crop&w=400&q=80"
+  } 
 }
