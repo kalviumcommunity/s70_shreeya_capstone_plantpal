@@ -5,7 +5,17 @@ meta {
 }
 
 put {
-  url: http://localhost:8000/user/updateplant/6800c92d4be1455ec97cad9a
-  body: none
+  url: http://localhost:8000/user/updateplant/6839e622335891a89a6e07ff
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name" : "spider-plant",
+    "species" : "Chlorophytum",
+    "description" : "spider like appearance",
+    "watering-frequency" : "Daily",
+    "image-url" : "https://images.unsplash.com/photo-1598899134739-42e3b6e5c527?auto=format&fit=crop&w=400&q=80"
+  }
 }

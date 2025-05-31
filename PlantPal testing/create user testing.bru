@@ -5,7 +5,15 @@ meta {
 }
 
 post {
-  url: http:/localhost:8000/user/newuser
-  body: none
+  url: http://localhost:8000/user/newuser
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "username" : "Arborista123",
+    "email" : "iamthequeen@gmail.com",
+    "password" : "snakeplantsrock123"
+  }
 }
