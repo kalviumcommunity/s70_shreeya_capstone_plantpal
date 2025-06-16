@@ -1,0 +1,11 @@
+meta {
+  name: fetch plants
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:8000/user/plants
+  body: json
+  auth: inherit
+}
