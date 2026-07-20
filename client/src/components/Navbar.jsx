@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 const Navbar = () => {
@@ -7,13 +7,13 @@ const Navbar = () => {
   
     return (
       <nav className="p-4 flex justify-between items-center flex items-center space-x-*">
-        <a href="/" className="text-2xl font-bold text-green-800">PlantPal</a>
+        <Link to="/" className="text-2xl font-bold text-green-800">PlantPal</Link>
         <div className="space-x-4">
-          <a href="/" className="text-green-700 hover:underline">Home</a>
-          <a href="/myplants" className="text-green-700 hover:underline">My Plants</a>
-          <a href="/community" className="text-green-700 hover:underline">Community</a>
-          <a href="/profile" className="text-green-700 hover:underline">Profile</a>
-          <a href="/login" className="text-green-700 hover:underline">Login</a>
+          <Link to="/" className="text-green-700 hover:underline">Home</Link>
+          <Link to="/myplants" className="text-green-700 hover:underline">My Plants</Link>
+          <Link to="/community" className="text-green-700 hover:underline">Community</Link>
+          <Link to="/profile" className="text-green-700 hover:underline">Profile</Link>
+          <Link to="/login" className="text-green-700 hover:underline">Login</Link>
           <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" 
           onClick={()=>navigate('/signup')}>Sign-up</button>
         </div>
