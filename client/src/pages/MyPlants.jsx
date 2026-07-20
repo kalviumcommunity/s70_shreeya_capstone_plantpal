@@ -20,17 +20,29 @@ const dummyPlants = [
 ];
 
 const MyPlants = () => {
+
+    const handleDelete = (id) => {
+      const deletedPlants = dummyPlants.filter(p => p.id != id)
+      p.preventDefault()
+      setPlants(deletedPlants)
+
+    const handleUpdate = (plant)=>{
+      const editedPlant = dummyPlants.map((p)=>p.id == editedPlant.id ? {...p,...plant}:p)
+      setPlants(editedPlant)
+      setEditedPlants(null)
+      setUpdatePlants(plant)
+    }
+};
+
   return (
     <div className="min-h-screen bg-green-50 px-6 py-10">
       <h2 className="text-3xl font-bold text-green-800 mb-6 text-center">My Plants</h2>
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {dummyPlants.map((plant,id) => (
-          <Link to={`/plant/${plant.id}`}>
-          <PlantCard
-            key={plant.id}{...plant}
-          />
-          </Link>  
-        ))}
+       {dummyPlants.map((plant, id) => (
+  <Link to={`/plant/${plant.id}`}>
+    <PlantCard key={plant.id} {...plant} plant = {plant} onDelete = {handleDelete} />
+  </Link>
+))}
       </div>
     </div>
   );
